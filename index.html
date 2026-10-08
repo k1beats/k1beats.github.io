@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>K-1 Beats</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<style>
+/* K-1 Beats animated header — no changes needed in style.css */
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  position: relative;
+  z-index: 2;
+}
+
+.k1-visualizer {
+  width: min(580px, 86vw);
+  height: 76px;
+  margin: 24px auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.k1-visualizer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.18),
+    transparent
+  );
+}
+
+.k1-visualizer span {
+  display: block;
+  width: 5px;
+  min-height: 8px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: .88;
+  transform-origin: center;
+  animation: k1-eq 1.05s ease-in-out infinite alternate;
+  animation-delay: calc(var(--i) * -0.073s);
+  box-shadow: 0 0 14px rgba(255,255,255,.12);
+}
+
+.k1-visualizer span:nth-child(3n) {
+  animation-duration: .82s;
+}
+
+.k1-visualizer span:nth-child(4n) {
+  animation-duration: 1.28s;
+}
+
+.k1-visualizer span:nth-child(5n) {
+  opacity: .52;
+}
+
+.k1-visualizer span:nth-child(7n) {
+  animation-duration: .66s;
+}
+
+@keyframes k1-eq {
+  0% {
+    height: 10px;
+    transform: scaleY(.7);
+  }
+  20% {
+    height: 34px;
+    transform: scaleY(.95);
+  }
+  45% {
+    height: 62px;
+    transform: scaleY(1.05);
+  }
+  65% {
+    height: 22px;
+    transform: scaleY(.85);
+  }
+  82% {
+    height: 50px;
+    transform: scaleY(1);
+  }
+  100% {
+    height: 14px;
+    transform: scaleY(.75);
+  }
+}
+
+.k1-tagline {
+  position: relative;
+  z-index: 2;
+  margin-top: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .30em;
+  text-transform: uppercase;
+  opacity: .38;
+}
+
+@media (max-width: 600px) {
+  .k1-visualizer {
+    height: 58px;
+    gap: 4px;
+    margin-top: 18px;
+  }
+
+  .k1-visualizer span {
+    width: 4px;
+  }
+
+  .k1-tagline {
+    font-size: 9px;
+    letter-spacing: .20em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .k1-visualizer span {
+    animation: none;
+    height: 24px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="noise"></div>
+
+<header>
+
+<a href="index.html"><h1>K-1 Beats</h1></a>
+
+<p>
+Hip-Hop Producer · Beatmaker · Mix Engineer
+</p>
+
+
+<div class="k1-visualizer" aria-hidden="true">
+  <span style="--i:1"></span>
+  <span style="--i:2"></span>
+  <span style="--i:3"></span>
+  <span style="--i:4"></span>
+  <span style="--i:5"></span>
+  <span style="--i:6"></span>
+  <span style="--i:7"></span>
+  <span style="--i:8"></span>
+  <span style="--i:9"></span>
+  <span style="--i:10"></span>
+  <span style="--i:11"></span>
+  <span style="--i:12"></span>
+  <span style="--i:13"></span>
+  <span style="--i:14"></span>
+  <span style="--i:15"></span>
+  <span style="--i:16"></span>
+  <span style="--i:17"></span>
+  <span style="--i:18"></span>
+  <span style="--i:19"></span>
+  <span style="--i:20"></span>
+</div>
+
+<div class="k1-tagline">BEATS / SOUND / ENERGY</div>
+
+</header>
+
+<main class="playlist">
+
+<!-- TRACK -->
+
+<div class="track"
+
+data-src="audio/chopin.mp3"
+
+data-title="Chopin"
+
+data-info="160 BPM • G Minor">
+
+<div class="track-number">
+
+01
+
+</div>
+
+<button class="track-play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<div class="track-details">
+
+<h2>
+
+Chopin
+
+</h2>
+
+<p>
+
+160 BPM • G Minor
+
+</p>
+
+<div class="track-tags">
+
+<span>Dark Trap</span>
+
+<span>Nervous</span>
+
+<span>Orchestral</span>
+
+</div>
+
+</div>
+
+<div class="track-wave">
+
+<div class="wave"></div>
+
+</div>
+
+</div>
+
+<!-- TRACK -->
+
+<div class="track"
+
+data-src="audio/goatbell.mp3"
+
+data-title="Goat Bell"
+
+data-info="143 BPM • C Minor">
+
+<div class="track-number">
+
+02
+
+</div>
+
+<button class="track-play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<div class="track-details">
+
+<h2>
+
+Goat Bell
+
+</h2>
+
+<p>
+
+143 BPM • C Minor
+
+</p>
+
+<div class="track-tags">
+
+<span>Dark Trap</span>
+
+<span>Calm</span>
+
+<span>Cinematic</span>
+
+</div>
+
+</div>
+
+<div class="track-wave">
+
+<div class="wave"></div>
+
+</div>
+
+</div>
+  <!-- TRACK -->
+
+<div class="track"
+
+data-src="audio/birds.mp3"
+
+data-title="Birds"
+
+data-info="146 BPM • G Minor">
+
+<div class="track-number">
+
+03
+
+</div>
+
+<button class="track-play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<div class="track-details">
+
+<h2>
+
+Birds
+
+</h2>
+
+<p>
+
+146 BPM • G Minor
+
+</p>
+
+<div class="track-tags">
+
+<span>Dark Trap</span>
+
+<span>Sad</span>
+
+<span>No Sampling</span>
+
+</div>
+
+</div>
+
+<div class="track-wave">
+
+<div class="wave"></div>
+
+</div>
+
+</div>
+  <!-- TRACK -->
+
+<div class="track"
+
+data-src="audio/sugarplug.mp3"
+
+data-title="Sugar Plug"
+
+data-info="150 BPM • E Minor">
+
+<div class="track-number">
+
+04
+
+</div>
+
+<button class="track-play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<div class="track-details">
+
+<h2>
+
+Sugar Plug
+
+</h2>
+
+<p>
+
+150 BPM • E Minor
+
+</p>
+
+<div class="track-tags">
+
+<span>Dark Trap</span>
+
+<span>Tchaikovsky</span>
+
+<span>Bells</span>
+
+</div>
+
+</div>
+
+<div class="track-wave">
+
+<div class="wave"></div>
+
+</div>
+
+</div>
+  <!-- TRACK -->
+
+<div class="track"
+
+data-src="audio/valkiria.mp3"
+
+data-title="Valkiria"
+
+data-info="151 BPM • B Minor">
+
+<div class="track-number">
+
+05
+
+</div>
+
+<button class="track-play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<div class="track-details">
+
+<h2>
+
+Valkiria
+
+</h2>
+
+<p>
+
+151 BPM • B Minor
+
+</p>
+
+<div class="track-tags">
+
+<span>Dark Trap</span>
+
+<span>Nervous</span>
+
+<span>Agressive</span>
+
+</div>
+
+</div>
+
+<div class="track-wave">
+
+<div class="wave"></div>
+
+</div>
+
+</div>
+  <!-- TRACK -->
+
+<div class="track"
+
+data-src="audio/elevator.mp3"
+
+data-title="Elevator"
+
+data-info="136 BPM • B Minor">
+
+<div class="track-number">
+
+06
+
+</div>
+
+<button class="track-play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<div class="track-details">
+
+<h2>
+
+Elevator
+
+</h2>
+
+<p>
+
+136 BPM • B Minor
+
+</p>
+
+<div class="track-tags">
+
+<span>Dark Trap</span>
+
+<span>Elevator sound</span>
+
+<span>Mistic</span>
+
+</div>
+
+</div>
+
+<div class="track-wave">
+
+<div class="wave"></div>
+
+</div>
+
+</div>
+  <!-- TRACK -->
+
+<div class="track"
+
+data-src="audio/bizet.mp3"
+
+data-title="Bizet"
+
+data-info="151 BPM • E Minor">
+
+<div class="track-number">
+
+07
+
+</div>
+
+<button class="track-play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<div class="track-details">
+
+<h2>
+
+Bizet
+
+</h2>
+
+<p>
+
+151 BPM • E Minor
+
+</p>
+
+<div class="track-tags">
+
+<span>Dark Trap</span>
+
+<span>Classical</span>
+
+<span>Orchestral</span>
+
+</div>
+
+</div>
+
+<div class="track-wave">
+
+<div class="wave"></div>
+
+</div>
+
+</div>
+  <!-- TRACK -->
+
+<div class="track"
+
+data-src="audio/undeterred.mp3"
+
+data-title="Undeterred"
+
+data-info="136 BPM • C Minor">
+
+<div class="track-number">
+
+08
+
+</div>
+
+<button class="track-play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<div class="track-details">
+
+<h2>
+
+Undeterred
+
+</h2>
+
+<p>
+
+136 BPM • C Minor
+
+</p>
+
+<div class="track-tags">
+
+<span>Dark Trap</span>
+
+<span>Nervous</span>
+
+<span>Orchestral</span>
+
+</div>
+
+</div>
+
+<div class="track-wave">
+
+<div class="wave"></div>
+
+</div>
+
+</div>
+
+</main>
+
+<div class="player">
+
+<div class="player-left">
+
+<div id="player-title">
+
+Select beat
+
+</div>
+
+<div id="player-info">
+
+—
+
+</div>
+
+</div>
+
+<div class="player-center">
+
+<button id="prev">
+
+<i class="fas fa-backward"></i>
+
+</button>
+
+<button id="play">
+
+<i class="fas fa-play"></i>
+
+</button>
+
+<button id="next">
+
+<i class="fas fa-forward"></i>
+
+</button>
+
+</div>
+
+<div class="player-right">
+
+<span id="current">
+
+0:00
+
+</span>
+
+<input
+id="seek"
+type="range"
+min="0"
+max="100"
+value="0">
+
+<span id="duration">
+
+0:00
+
+</span>
+
+</div>
+
+</div>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
